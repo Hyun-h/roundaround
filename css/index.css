@@ -1,0 +1,489 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+/*header start*/
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 80px 0 80px;
+    z-index: 9999;
+}
+
+.ham {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 7px 0;
+}
+
+.h_search>a {
+    display: block;
+    width: 37px;
+    height: 37px;
+    background-image: url(../img/icons.png);
+    text-indent: -99999px;
+    /*background-position: 위(아래로 이동 -)에서 Npx 오른쪽(왼쪽으로 이동 -) Npx*/
+}
+
+.h_search_box_wrap {
+    position: absolute;
+    top: 90px;
+    right: 80px;
+    width: 467px;
+    padding: 32px;
+    background-color: #fff;
+    border: 1px solid #d5d5d5;
+}
+
+.serch_input {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #000;
+}
+
+.serch_input>input {
+    border: none;
+    outline: none;
+    background: none;
+    height: 52px;
+    padding: 16px 80px 14px 10px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.serch_input>a {
+    margin-top: 5px;
+}
+
+.award_list {
+    margin: 34px 0 40px;
+}
+
+.award_list>p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.award_list>ol {
+    padding-top: 8px;
+    counter-reset: my-sec-counter;
+}
+
+.award_list>ol>li {
+    color: #000;
+    padding: 16px 0;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 16px 0;
+    border-bottom: 1px solid #ededed;
+}
+
+.award_list>ol>li::before {
+    counter-increment: my-sec-counter;
+    content: counter(my-sec-counter) ". ";
+    font-weight: 500;
+    color: #000;
+}
+
+.close_btn {
+    min-width: 280px;
+    height: 56px;
+    background: #000;
+}
+
+.close_btn>a {
+    text-align: center;
+    display: block;
+    color: #fff;
+    line-height: 54px;
+    font-size: 20px;
+}
+
+
+/*main start*/
+main {
+    position: relative;
+}
+
+/*main : twin start*/
+.tween {
+    display: flex;
+}
+
+.tween>article {
+    width: 50%;
+}
+
+.l_txt {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-left: 10%;
+}
+
+.l_txt>h1 {
+    width: 100%;
+}
+
+.l_txt>p {
+    margin: 60px 0;
+    color: #555;
+}
+
+.l_txt>p>strong {
+    font-weight: bold;
+    color: #000;
+}
+
+.bg_img1 {
+    background-image: url(../img/visual01.jpg);
+    /*화면의 높이값을 따라 퍼센트로 봄. 넓이값 100% 는 100vw*/
+    /*min-height: 최소높이값; min-width: 최소넓이값;*/
+    /*max-height: 최대높이값; max-width: 최대넓이값;*/
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center right;
+    /*background-size: contain; 요소 > 이미지, 이미지의 가로세로 비율을 유지해서 늘려줌*/
+    /*background-size: auto 100%; -> 좌우 자동, 위아래 100%*/
+    background-size: contain;
+    /*패럴렉스*/
+    background-attachment: fixed;
+}
+
+/*main : brand_story start*/
+.brand_story {
+    width: 100%;
+    padding: 240px 0;
+    background: url(../img/parallax_bg.jpg) no-repeat;
+    background-attachment: fixed;
+    /*background-size: cover; 이미지를 작게 조정해서 덮음*/
+    background-size: cover;
+}
+
+.brand_story_txt>h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1.15;
+}    
+
+.brand_story_txt>p {
+    color: #fff;
+    margin: 32px 0 60px;
+    text-align: center;
+}
+
+.btn_bs>a {
+    display: block;
+    width: 180px;
+    padding: 10px 0;
+    border: 1px solid #fff;
+    margin: auto;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+}
+
+/*main : rara start*/
+.rara>h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+    padding: 150px 40px;
+}
+
+.rara>article {
+    display: flex;
+    width: 1200px;
+    margin: auto;
+}
+
+.rara img {
+    /*이미지는 인라인 속성이라 간격이 조금씩 있음. 인라인 태그들의 세로정렬*/
+    vertical-align: bottom;
+}
+
+.rara_right {
+    display: flex;
+    /*이미지 빼고는 배경이 없으므로 배경색을 부모에게 줘도 상관없음*/
+    background-color: #76887F;
+}
+
+.rara_r_txt1 {
+    height: calc(100% - 228px);
+    padding: 160px 24px 0;
+}
+
+.rara_r_txt1>p {
+    color: #fff;
+    font-weight: 300;
+}
+
+.rara_r_txt1>a {
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    border-bottom: 2px solid #fff;
+    margin-top: 20px;
+}
+
+.rara_img2 {
+    display: flex;
+}
+
+.rara_r_txt2 {
+    color: #fff;
+    font-weight: 300;
+    padding: 40px 60px;
+}
+
+/*main : second start*/
+.second {
+    margin-top: 100px;
+}
+
+.bg_img2 {
+    background-image: url(../img/visual03.jpg);
+    background-position: left top;
+    /*공통된 걸 만들고 다른 클래스를 부여하는 형식으로 작성해보기*/
+}
+
+.con_box {
+    padding-top: calc(50vh - 100px);
+}
+
+.contents {
+    width: 468px;
+    margin: auto;
+    padding: calc(50% + 200px) 0;
+}
+
+.contents>h3 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.contents>p {
+    margin: 20px 0 60px;
+}
+
+.contents>div>a {
+    display: block;
+    width: 120px;
+    padding: 10px 0;
+    border: 1px solid #b3b3b3;
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+}
+
+.product_greentea {
+    padding-left: 58px;
+}
+
+.product_greentea_txt {
+    display: flex;
+    width: 588px;
+}
+
+.product_greentea_txt>div {
+    width: 50%;
+}
+
+
+.product_greentea_txt img {
+    width: 100%;
+}
+
+.txt_right {
+    padding-left: 30px;
+}
+
+.txt_left {
+    padding-right: 30px;
+}
+
+.product_greentea_txt h4 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 42px;
+    margin-top: 40px;
+}
+
+.product_greentea_txt p {
+    color: #555;
+    margin: 16px 0 32px;
+}
+
+.more_btn {
+    display: inline-block;
+    border-bottom: 1px solid #555;
+    color: #000;
+}
+
+.product_list {
+    display: flex;
+    width: 588px;
+    padding-top: 30px;
+}
+
+.product_list>li {
+    width: 33.333%;
+    padding: 0 12px;
+}
+
+.product_list>li>div {
+    background-color: #F9F9F9;
+    text-align: center;
+}
+
+.product_list>li>div>img {
+    width: 95%;
+}
+
+.product_list>li>p {
+    visibility: hidden;
+    margin: 15px 0;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #555;
+}
+
+.product_list>li:hover p {
+    visibility: visible;
+}
+
+.product_basic {
+    padding: 120px 0 0 58px;
+}
+
+/*main : third bg_img3 start*/
+.third {
+    margin-top: 100px;
+}
+
+.bg_img3 {
+    background-image: url(../img/visual02.jpg);
+}
+
+.product_basic_txt>div {
+    text-align: right;
+}
+
+.product_fragrance {
+    margin-left: 120px
+}
+
+/*roundaround_offcial start*/
+.roundaround_offcial {
+    margin: 120px 0 160px 0;
+}
+
+.roundaround_offcial>article {
+    margin: auto;
+    text-align: center;
+}
+
+.roundaround_offcial>article>h3 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.roundaround_offcial>article>p {
+    padding: 16px 0 54px;
+    line-height: 40px;
+}
+
+.roundaround_offcial>article>p>a {
+font-weight: 400;
+line-height: 1.38;
+color: #000;
+}
+
+.roundaround_offcial>article>ul {
+    display: flex;
+    justify-content: center;
+}
+
+.roundaround_offcial>article>ul>li {
+    width: 282px;
+    margin-right: 24px;
+}
+
+.roundaround_offcial>article>ul>li>img {
+    width: 100%;
+}
+
+.r_small_logo {
+    width: 33px;
+    height: 33px;
+    margin-right: 7px;
+    display: inline-block;
+    background-image: url(../img/icons.png);
+    background-size: 400px auto;
+    background-repeat: no-repeat;
+    background-position: -120px 0;
+    vertical-align: middle;
+}
+
+/*footer start*/
+footer {
+    position: relative;
+    background-color: #F9F9F9;
+    width: 100%;
+    padding: 60px 0 40px;
+}    
+
+#footer_wrap {
+    width: 1020px;
+    height: 220px;
+    margin: auto;
+}    
+
+#footer_logo_box {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EDEDED;
+}    
+
+#footer_logo_box>p {
+    display: block;
+    width: 160px;
+    height: 46px;
+    background: url(../img/logo_s.png) no-repeat left center;
+}    
+
+#footer_wrap>ul {
+    display: flex;
+    margin-bottom: 20px;
+}    
+
+#footer_wrap>ul>li{
+    font-size: 14px;
+    color: #777;
+    margin-right: 40px;
+    font-weight: bold;
+}    
+
+#footer_wrap>address>span {
+    font-size: 14px;
+    color: #777;
+    margin-right: 20px;
+}    
+
+#footer_wrap>p {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #777;
+    font-weight: 400;
+    line-height: 1.38;
+}    
+
